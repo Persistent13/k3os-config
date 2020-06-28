@@ -1,0 +1,16 @@
+ssh_authorized_keys:
+- github:persistent13
+hostname: k3os
+
+k3os:
+  dns_nameservers:
+  - 10.186.1.1
+  - 1.1.1.1
+  ntp_servers:
+  - pool.ntp.org
+  k3s_args:
+  - server
+  - "--tls-san=k3os.ad.juvenoia.com"
+  - "--no-deploy=traefik"
+  environment:
+    TZ: "America/Denver"
