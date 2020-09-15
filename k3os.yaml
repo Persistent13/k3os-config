@@ -11,7 +11,6 @@ k3os:
   k3s_args:
   - server
   - "--tls-san=k3os.ad.juvenoia.com"
-  - "--no-deploy=traefik"
   - "--secrets-encryption"
   environment:
     TZ: "America/Denver"
