@@ -4,7 +4,7 @@ hostname: k3os
 
 k3os:
   dns_nameservers:
-  - 10.186.1.1
+  - 9.9.9.9
   - 1.1.1.1
   ntp_servers:
   - pool.ntp.org
@@ -12,5 +12,6 @@ k3os:
   - server
   - "--tls-san=k3os.ad.juvenoia.com"
   - "--secrets-encryption"
+  - "--disable=traefik"
   environment:
     TZ: "America/Denver"
